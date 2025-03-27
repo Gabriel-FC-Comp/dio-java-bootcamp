@@ -56,7 +56,8 @@ public class ContaTerminal {
         System.out.print("Por favor, digite o número da Conta: ");
         novaConta.setNumeroConta(dataScanner.nextInt());
         System.out.print("Por favor, digite o seu Nome completo: ");
-        novaConta.setNomeCliente(dataScanner.next());
+        dataScanner.nextLine(); // Limpa a quebra de linha do buffer
+        novaConta.setNomeCliente(dataScanner.nextLine());
         System.out.print("Por favor, digite o saldo inicial a ser depositado: R$");
         novaConta.setSaldo(dataScanner.nextDouble());
 
